@@ -29,8 +29,8 @@ Syntax highlighted code block
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 <iframe 
-    height=450 
-    width=800 
+    height=350 
+    width=400 
     src="https://youtu.be/SaST3sSvhSk" 
     frameborder=0 
     allowfullscreen>
