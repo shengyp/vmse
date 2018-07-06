@@ -28,13 +28,10 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-<iframe 
-    height=350 
-    width=400 
-    src="https://youtu.be/SaST3sSvhSk" 
-    frameborder=0 
-    allowfullscreen>
-</iframe>
+<video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+      <source id="wmv" src="https://youtu.be/SaST3sSvhSk" type="video/wmv">
+      <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
 
 
 ### Jekyll Themes
