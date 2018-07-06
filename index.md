@@ -29,9 +29,9 @@ Syntax highlighted code block
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 <video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
-      <source id="wmv" src="https://youtu.be/SaST3sSvhSk" type="video/wmv">
+      <source id="wmv" src="https://www.youtube.com/watch?v=SaST3sSvhSk&t=36s" type="video/wmv">
       <p>Your user agent does not support the HTML5 Video element.</p>
-    </video>
+</video>
 
 
 ### Jekyll Themes
