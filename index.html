@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Visualizing Multi-Document Semantics via Open Domain Information Extraction | vmse</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Visualizing Multi-Document Semantics via Open Domain Information Extraction</h1>
+        <!-- <h2 class="sub-title"></h2>
+        <div class="auther">
+            <span>
+                <a href=""></a>
+                <sup class="auther-order"></sup>
+            </span>
+            <span>
+                <a href=""></a>
+                <sup class="auther-order"></sup>
+            </span>
+            <span>
+                <a href=""></a>
+                <sup class="auther-order"></sup>
+            </span>
+        </div> -->
+        <section class="para">
+            <p class="context"> Our system uses a large collection of news articles released by Signal Media. It consists of 734,488 news articles
+                and 265,512 blog articles, in total around 1 million English-language articles, with an average article length
+                of 405 words. The articles stem from a variety of news sources and were collected during a period of one
+ month (1-30 September 2015). It can be
+<a href="http://research.signalmedia.co/newsir16/signal-dataset.html">downloaded</a> from here.
+            </p>
+        </section>
+        <section class="para">
+            <h3 class="para-title">Basic idea</h3>
+            <p class="context">In today’s interconnected world, there is an endless 24/7 stream of new articles appearing online. Faced with
+                these overwhelming amounts of data, it is often helpful to consider only the key entities and concepts and
+                their relationships. This is challenging, as relevant connections may be spread across a number of disparate
+                articles and sources.</p>
+            <p class="context">We present a system that extracts salient entities, concepts, and their relationships from a set of related documents,
+                discovers connections within and across them, and presents the resulting information in a graph-based visualization.
+                We rely on a series of natural language processing methods, including open-domain information extraction,
+                a special filtering method to maintain only meaningful relationships, and a heuristic to form a graph with
+                high coverage rate of topic entities and concepts. Our graph visualization then allows users to explore these
+                connections. In our demonstration, we use a large collection of news crawled from the Web and show how connections
+                within this data can be explored.
+            </p>
+        </section>
+        <section class="para">
+            <h3 class="para-title">How dose the system works?</h3>
+            <p class="context">The objective of our system is to support the user in quickly finding salient connections and facts from a collection
+                of news articles, with a beginner-friendly interactive visualization interface. Our system is componsed of
+                three major components:</p>
+            <ul>
+                <li>Fact extraction module</li>
+                <li>Fact filtering module</li>
+                <li>Conceptual graph construction module</li>
+            </ul>
+            <p class="context">In the following, we will give a concrete example to illustrate the intermediate result of our system.
+            </p>
+            <p class="context">By default, the system lists five predefined trending news topics, e.g. the Syria refugee crisis, Iran nuclear
+                issue, Volkswagen scandal, US presidential election, and the Chinese cooperation with Sudan. For each topic,
+                the user can select relevant high-frequency keywords. For example, the user select several topic keywords
+                of US presidential election, the system shows a list of documents ranked by their weight as selected, in
+ which we select the top-25 documents for further processing,they can be
+        <a href="https://github.com/shengyp/Multi-Docs-semantics/tree/master/data/elections/documents">retrieved</a> from here.
+            </p>
+            <p class="context">We rely on a series of natural language processing methods that provided by the fact module, including open-domain information extraction and coreference resolution, to achieve this while accounting for linguistic phenomena, e.g., handling pronouns such as ''she''. While previous work on open information extraction has extracted large numbers of subject-predicate-object triples, our method attempts to maintain only those that are most likely to correspond to meaningful relationships. For above top-25 documents, we can obtain corresponding result as <a href="https://github.com/shengyp/Multi-Docs-semantics/tree/master/data/elections/extracted-facts">retrieved</a> from here.</p>
+            <p class="context">This data can be filtered such that only the most salient connections are maintained. That is, a set of entities and concepts as nodes and their connections as links to mark and compatible after applying the filtering algorithm. The result of fact filtering module can be <a href="https://github.com/shengyp/Multi-Docs-semantics/blob/master/data/elections/filtering-facts">download</a> from here.
+            </p>
+            <p class="context">The annotators with NLP background employ a heuristic to merge these subgraphs that formed in fact filtering module to a full conceptual graph, it guarantees the connected component of 25 entities and concepts or less remains.</p>
+            <p class="context"></p>
+        </section>
+        <section class="para">
+            <h3 class="para-title">Evaluation</h3>
+            <p class="context">The evaluation metrics for our include: </p>
+            <ul>
+                <li>Coverage Rate. We evaluation coverage rate of the topic concepts. Coverage rate is the number of topic concepts for which assigns correct divided by the total number of all entities and concepts in the conceptual graph.</li>
+                <li>ROUGE Criterion. Due to ROUGE criteria is mainly appropriate for document abstract evaluation. We use Submodular1 algorithm to generate the abstract for specific multi-document as reference graph, then present our conceptual graph across these documents to tidy up in the form of documents abstract, in which those facts sorting might be complemented with annotators. In comparison with reference graph using different ROUGE methods, we can compute performance params that on average and fill in Table 2.</li>
+            </ul>
+            <p class="context">The correspondence between the summarization methods and the summarization tasks is shown in the following table:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Avg_Precision</th>
+                        <th>Avg_Recall</th>
+                        <th>Avg_F-Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ROUGE-2</td>
+                        <td>0.643</td>
+                        <td>0.438</td>
+                        <td>0.521</td>
+                    </tr>
+                    <tr>
+                        <td>ROUGE-L</td>
+                        <td>0.517</td>
+                        <td>0.259</td>
+                        <td>0.346</td>
+                    </tr>
+                    <tr>
+                        <td>ROUGE-S</td>
+                        <td>0.344</td>
+                        <td>0.384</td>
+                        <td>0.362</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="para">
+            <h3 class="para-title">References</h3>
+            <p class="context">Fu, R., Guo, J., Qin, B., Che, W., Wang, H., &amp; Liu, T. (2014). Learning Semantic Hierarchies via Word Embeddings. In ACL (1) (pp. 1199-1209).</p>
+            <p class="context">Novak J D, Cañas A J. Theoretical origins of concept maps, how to construct them, and uses in education[J]. Reflecting Education, 2007(1-2).</p>
+            <p class="context">Manning C D, Surdeanu M, Bauer J, et al. The Stanford CoreNLP Natural Language Processing Toolkit[C]// Meeting of the Association for Computational Linguistics: System Demonstrations. 2014.</p>
+            <p class="context">Mihalcea R, Tarau P. TextRank: Bringing Order into Texts[C]// Conference on Empirical Methods in Natural Language Processing, EMNLP 2004, A Meeting of Sigdat, A Special Interest Group of the Acl, Held in Conjunction with ACL 2004, 25-26 July 2004, Barcelona, Spain. DBLP, 2004:404-411.</p>
+            <p class="context">Pilehvar M T, Jurgens D, Navigli R. Align, Disambiguate and Walk: A Unified Approach for Measuring Semantic Similarity[C]// Meeting of the Association for Computational Linguistics. 2013.</p>
+            <p class="context">Li, Jingxuan, Lei Li, and Tao Li. 2012. Multi-document summarization via submodularity. Applied Intelligence 37.3: 420-430.</p>
+        </section>
+        <section class="para">
+            <h3 class="para-title">Contact us</h3>
+            <p class="context">Welcome to contact us if you have any questions or suggestions about our system.</p>
+            <p class="context">Contact person: Yongpan Sheng</p>
+            <p class="context">Contact email: shengyp2011@163.com</p>
+        </section>
+    </div>
+</body>
+
+</html>
