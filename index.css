@@ -37,12 +37,12 @@ body{
      /**text-align: center;*/
 }
 .auther span{
-    margin:0 5px;
+    margin:0 6px;
 }
 .auther-apart span{
     margin:0 10px;
 } 
-.auther a{
+.auther a,.auther-apart a{
     color: deepskyblue;
     text-decoration:none;
 }
