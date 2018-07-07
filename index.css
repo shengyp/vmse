@@ -32,7 +32,7 @@ body{
     margin: 10px 0 0 0;
     color: brown;
 }
-.auther{
+.auther,.auther-apart{
     color: deepskyblue;
      /**text-align: center;*/
 }
