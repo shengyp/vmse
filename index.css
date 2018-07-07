@@ -41,7 +41,8 @@ body{
 }
 .auther a{
     color: deepskyblue;
-    text-decoration:none
+    text-decoration:none;
+    margin: 3px 0 0 0;
 }
 .para{
     margin:20px 0;
