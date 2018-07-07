@@ -34,13 +34,14 @@ body{
 }
 .auther{
     color: deepskyblue;
-    text-align: center;
+     /**text-align: center;*/
 }
 .auther span{
     margin:0 10px;
 }
 .auther a{
     color: deepskyblue;
+    text-decoration:none
 }
 .para{
     margin:20px 0;
