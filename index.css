@@ -27,7 +27,6 @@ img{
 }
 .paperlink hover{
     margin:0px 0px 0px 0px;
-    text:XX;
 }
 .videoImg{
     width: 380px;
@@ -44,7 +43,7 @@ img{
     padding:10px 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: -2px;
-    background-color:rgba(13, 255, 165, 0.4) ;
+    /* background-color:rgba(13, 255, 165, 0.4) ; */
 }
 .sub-title{
     font-size: 1.5em;
@@ -59,13 +58,15 @@ img{
     color:black;
 }
 .auther span{
-    margin:0 6px;
+    margin:0 4px;
 }
 .auther-apart span{
-    margin:0 10px;
+    margin:0 8px;
 } 
 .auther a,.auther-apart a{
-    color: deepskyblue;
+    /**color: deepskyblue;**/
+    color:#0C8AE8;
+    font-weight:bold;
     text-decoration:none;
 }
 .para{
@@ -86,8 +87,8 @@ img{
 .para-title{
     margin:10px 0;
     padding: 5px 30px;
-    color:#313131;
-    background-color:#00D6FF;
+    color:black;
+    background-color:#0C8AE8;
 }
 .context{
     margin:10px 50px;
