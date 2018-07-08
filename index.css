@@ -85,6 +85,9 @@ img{
 .para a:hover{
     text-decoration: underline;
 }
+.posterlink{
+    margin:0px 0px 50px 700px;
+}
 .para-title{
     margin:10px 0;
     padding: 5px 30px;
