@@ -7,7 +7,7 @@ ul{
     padding:0 0 0 70px;
 }
 div img{
-    margin:0 0 0 90px;
+    margin:0 0 0 100px;
 }
 img{
     width: 180px;
@@ -25,8 +25,14 @@ img{
     /* border-radius: 10px; */
     /* box-shadow: rgba(0, 0, 0,0.5) 0px 0px 3px ; */
 }
-.paperlink{
-    margin:15 0 0 40px;
+.paperlink hover{
+    margin:0px 0px 0px 0px;
+    text:XX;
+}
+.videoImg{
+    width: 380px;
+    weight: 470px;
+    margin:0px 0px 0px 140px;
 }
 .title,.sub-title{
     width: 100%;
