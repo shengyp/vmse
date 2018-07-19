@@ -33,6 +33,11 @@ img{
     weight: 470px;
     margin:0px 0px 0px 140px;
 }
+.posterImg{
+    width: 380px;
+    weight: 470px;
+    margin:0px 0px 0px 140px;
+}
 .title,.sub-title{
     width: 100%;
     text-align: center;
