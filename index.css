@@ -29,14 +29,14 @@ img{
     margin:0px 0px 0px 0px;
 }
 .videoImg{
-    width: 380px;
-    weight: 470px;
-    margin:0px 0px 0px 110px;
+    width: 400px;
+    weight: 480px;
+    margin:0px 0px 0px 100px;
 }
 .posterImg{
-    width: 380px;
-    weight: 470px;
-    margin:0px 0px 0px 50px;
+    width: 400px;
+    weight: 200px;
+    margin:0px 0px 0px 70px;
 }
 .title,.sub-title{
     width: 100%;
